@@ -1,0 +1,25 @@
+server:
+  port: 9080
+spring:
+  application:
+    name: app
+
+
+  #######################################################################
+  # Database configuration
+  #######################################################################
+
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/app
+    username: app
+    password: mysecretpassword
+
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      #      Автоматически создать таблицы/схемы в базе данных.
+      ddl-auto: update
+    show-sql: true
